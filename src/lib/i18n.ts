@@ -1,0 +1,56 @@
+export type Language = 'en' | 'ne';
+
+export const translations = {
+  en: {
+    home: 'Home',
+    map: 'Interactive Map',
+    leaders: 'Leaders',
+    parties: 'Parties',
+    search: 'Search',
+    searchPlaceholder: 'Search leaders, parties, constituencies...',
+    exploreNepal: 'Explore Nepal Elections',
+    subtitle: 'Interactive election data and leader profiles',
+    viewMap: 'View Interactive Map',
+    browseLeaders: 'Browse Leaders',
+    searchCandidates: 'Search Candidates',
+    party: 'Party',
+    constituency: 'Constituency',
+    votes: 'Votes',
+    winner: 'Winner',
+    education: 'Education',
+    occupation: 'Occupation',
+    assets: 'Assets',
+    liabilities: 'Liabilities',
+    criminalCases: 'Criminal Cases',
+    biography: 'Biography',
+    electionHistory: 'Election History',
+  },
+  ne: {
+    home: 'गृहपृष्ठ',
+    map: 'अन्तरक्रियात्मक नक्सा',
+    leaders: 'नेताहरू',
+    parties: 'दलहरू',
+    search: 'खोज्नुहोस्',
+    searchPlaceholder: 'नेता, दल, निर्वाचन क्षेत्र खोज्नुहोस्...',
+    exploreNepal: 'नेपाल निर्वाचन अन्वेषण गर्नुहोस्',
+    subtitle: 'अन्तरक्रियात्मक निर्वाचन डाटा र नेता प्रोफाइल',
+    viewMap: 'अन्तरक्रियात्मक नक्सा हेर्नुहोस्',
+    browseLeaders: 'नेताहरू ब्राउज गर्नुहोस्',
+    searchCandidates: 'उम्मेदवार खोज्नुहोस्',
+    party: 'दल',
+    constituency: 'निर्वाचन क्षेत्र',
+    votes: 'मत',
+    winner: 'विजेता',
+    education: 'शिक्षा',
+    occupation: 'पेशा',
+    assets: 'सम्पत्ति',
+    liabilities: 'दायित्व',
+    criminalCases: 'आपराधिक मुद्दा',
+    biography: 'जीवनी',
+    electionHistory: 'निर्वाचन इतिहास',
+  },
+};
+
+export function translate(key: keyof typeof translations.en, lang: Language): string {
+  return translations[lang][key] || translations.en[key];
+}
